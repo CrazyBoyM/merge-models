@@ -33,11 +33,11 @@ echo "Enter alpha value (0.0-1.0)."
 set /p alpha="Or press [ENTER] for default [%alpha%]: "
 
 :ask_filename
-set "output=merged"
-echo "Enter output filename without file extension."
-set /p output="Or press [ENTER] for default [%output%]: "
+set "dump_path=merged.safetensors"
+echo "Enter output path."
+set /p dump_path="Or press [ENTER] for default [%dump_path%]: "
 
 :launch
-%PYTHON% merge.py %filename1% %filename2% --alpha %alpha% --output %output%
+%PYTHON% merge.py %filename1% %filename2% --alpha %alpha% --dump_path %dump_path%
 pause
 exit /b
