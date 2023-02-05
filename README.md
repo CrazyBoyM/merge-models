@@ -31,7 +31,7 @@ Just like with the .bat method, I'd recommend creating a folder within your stab
   - For users of [sd-webui](https://github.com/sd-webui/stable-diffusion-webui) (formerly known as HLKY) you should just be able to do
     - `conda activate ldm`
 - run merge.py with arguments
-  - `py merge.py model0 model1 --alpha 0.5 --output merged`
+  - `py merge.py model0 model1 --alpha 0.5 --dump_path merged.safetensors`
     - Optional: `--alpha` controls how much weight is put on the second model. Defaults to 0.5, if omitted
     - Optional: `--dump_path` is the path of the merged file. Such as "./xxx.safetensors"
     - Optional: `--device` is the device that's going to be used to merge the models. Unless you have a ton of VRAM, you should probably just ignore this. Defaults to 'cpu', if omitted.
