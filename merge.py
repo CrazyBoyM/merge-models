@@ -30,8 +30,8 @@ def save_weights(weights, path):
       torch.save({"state_dict": weights}, path) 
         
 device = args.device
-theta_0 = load_weights(args.model_0, map_location=device)
-theta_1 = load_weights(args.model_1, map_location=device)
+theta_0 = load_weights(args.model_0, device=device)
+theta_1 = load_weights(args.model_1, device=device)
 alpha = args.alpha
 
 for key in tqdm(theta_0.keys(), desc="Stage 1/2"):
